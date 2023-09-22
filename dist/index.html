@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What to Do</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="logo-Area">
        <div class="hamburgerMenu">
-            <span><img src="images/menu.png" alt="menu svg" width="40px"></span>
+            <span><img src="images/menu.png" alt="menu svg" class="hamMenu"></span>
        </div>
        <div class="logo-Text">
-            <img src="images/check_logo.png" alt="logo" width="40px">
+            <img src="images/check_logo.png" alt="logo">
             <div class="logosvg"><span>WhatToDo</span></div>
        </div>
        <div class="theme">
@@ -93,6 +94,37 @@
             <div id="contentDisplay">
                 <ul id="contentUl"></ul>
             </div>
+            <!-- Hidden pop up option -->
+            <div class="listOption">
+                <button id="listEdit">Edit</button>
+                <button id="listDelete">Delete</button>
+            </div>
+            <!-- Hidden edit list form -->
+            <form autocomplete="off" id="addListForm">
+                <label>Title:</label>
+                <input type="text" placeholder="What to do?">
+                <label>Details(optional):</label>
+                <textarea type="text" placeholder="eg: i'll do it later?" wrap="hard">
+                <label>Date:</label>
+                <input type="date">
+                <div class="formButtons">
+                    <button>Add</button>
+                    <button>Cancel</button>
+                </div>
+            </form>
+            <!-- Hidden add list form -->
+            <form autocomplete="off" id="addListForm">
+                <label>Title:</label>
+                <input type="text" placeholder="What to do?">
+                <label>Details(optional):</label>
+                <textarea type="text" placeholder="eg: i'll do it later?" wrap="hard">
+                <label>Date:</label>
+                <input type="date">
+                <div class="formButtons">
+                    <button>Add</button>
+                    <button>Cancel</button>
+                </div>
+            </form>
             <div class="addTaskBtn">
                 <div class="addTaskSvg">
                     <img src="images/iconmonstr-plus-circle-thin.png" alt="addIconSvg">

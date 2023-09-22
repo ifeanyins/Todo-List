@@ -1,0 +1,15 @@
+:root {
+    --bgcolor1:#15202b;
+    --bgColorPopUp: #273746;
+    --textColor: #eaebec;
+    --accent: #2abd67;
+    --accentDark:#1f8d4d;
+}
+
+body{
+    font-family: sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
