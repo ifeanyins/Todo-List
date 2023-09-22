@@ -6,33 +6,100 @@
     <title>What to Do</title>
 </head>
 <body>
-    <header>
-        <div class="header-contents">
-            <div class="hamburger-menu"></div>
-        </div>
+    <header class="logo-Area">
+       <div class="hamburgerMenu">
+            <span><img src="images/menu.png" alt="menu svg" width="40px"></span>
+       </div>
+       <div class="logo-Text">
+            <img src="images/check_logo.png" alt="logo" width="40px">
+            <div class="logosvg"><span>WhatToDo</span></div>
+       </div>
+       <div class="theme">
+            <input type="checkbox" checked="true">
+            <label for="checkbox" class="labelB">
+                <img src="images/sun (1).png" alt="" class="sun">
+                <img src="images/download.png" alt="darkmode" class="moon">
+                <div class="ball"></div>
+            </label>
+       </div>
+       <div class="header-line"></div>
     </header>
-    <!-- 
-        # ToDo-List
- - This is a Basic Todo-List
- - using date-fns package
- - Check out live preview here: https://khunhour.github.io/todo_list/
-# Functionality
- - add projects
- - rename projects
- - change order of projects using drag and drop feature
- - temporarily hide side panel 
- - add tasks into your projects (title, details, due-date)
- - mark or unmark your tasks as completed or important
- - edit you tasks (title, details, due-date)
- - delete you tasks
- - display all tasks
- - display all tasks that is dued today
- - display all tasks that is dued until next week
- - display all tasks that are marked important
- - save all you projects and task to localStorage
- - light & Dark mode
-# Note to self
- - on smaller screen, side panel show above instead of on the side(flex items vs position absolute);
-     -->
+    <div class="content">
+        <div class="leftPanel">
+            <div class="home">
+                <h1>Home</h1>
+                <div class="home-line"></div>
+                <div class="tile selected" id="alltasks">
+                    <img src="images/inbox.png" alt="all tasks">
+                    <div>All Tasks</div>
+                </div>
+                <div class="tile" id="today">
+                    <img src="images/today1.png" alt="today">
+                    <div>today</div>
+                </div>
+                <div class="tile" id="week">
+                    <img src="images/week2.png" alt="week">
+                    <div>Next 7 Days</div>
+                </div>
+                <div class="tile" id="important">
+                    <img src="images/star.png" alt="important">
+                    <div>Next 7 Days</div>
+                </div>
+            </div>
+            <div class="projects">
+                <h1>Projects</h1>
+                <div class="project-line"></div>
+                <form autocomplete="off" id="project-input" class="hidden">
+                    <div id="project-icon">
+                        <img src="images/menu.png" alt="project input menu">
+                    </div>
+                    <!-- Hidden Input field -->
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter Project name">
+                        <button id="add">Add</button>
+                        <button id="Cancel">Cancel</button>
+                    </div>
+                    <!-- project options -->
+                    <div class="projectOPtions">
+                        <div class="optionBtn">
+                            <button>Rename</button>
+                            <button>Delete</button>
+                        </div>
+                    </div>
+                    <!-- Hidden RenameInput field -->
+                    <form id="renameForm">
+                        <div id="renamemenuImg">
+                            <img src="images/menu.png" alt="menu">
+                        </div>
+                        <input type="text" autocomplete="off" id="renameFormInput">
+                        <div class="renameFBtn">
+                            <button>rename</button>
+                            <button>Cancel</button>
+                        </div>
+                    </form>
+                    <div class="add-Project">
+                        <div class="addProjectSvg">
+                            <img src="images/iconmonstr-plus-circle-thin.png" alt="addIconSvg">
+                        </div>
+                        <div class="addBtnSvg">Add Project</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="rightPanel">
+            <div class="contentHead">
+                <h1 class="headValue"></h1>
+            </div>
+            <div id="contentDisplay">
+                <ul id="contentUl"></ul>
+            </div>
+            <div class="addTaskBtn">
+                <div class="addTaskSvg">
+                    <img src="images/iconmonstr-plus-circle-thin.png" alt="addIconSvg">
+                </div>
+                <div class="addBtnSvg">Add Task</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
